@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/3a6cfb4580.js" crossorigin="anonymous"></script>
+    <script src="./app.js" defer></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="manifest" href="./assets/site.webmanifest">
+
+    <title>EmojiHub</title>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav__container">
+        <div id="title"><a href="index.html">EMOJI<span id="title--primary">HUB</span></a></div>
+
+        <ul id="nav__link--list">
+          <li><a href="#" class="nav__link nav__link--hide">Home</a></li>
+            <li><a href="#" class="nav__link nav__link--hide no-cursor">Contact</a></li>
+            <li>
+            <a href="emoji.html" class="nav__link nav__link--primary"
+              >FIND EMOJI</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="emoji__container">
+      <div class="emoji__description">
+        <h1>Find your emoji</h1>
+
+        <div class="emoji__input--wrapper">
+          <input
+            type="text"
+            placeholder="Find emojis by name or description"
+            class="input__emoji"
+            onchange="onSearchChange(event)"
+          /> 
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </input>
+       
+        </div>
+        <ul class="emoji-categories">
+            <li class="emoji-category" onclick="searchCategory(this.id)" id="smileys-emotion">Emotions</li>
+            <li class="emoji-category" onclick="searchCategory(this.id)" id="animals-nature">Animals / Nature</li>
+            <li class="emoji-category" onclick="searchCategory(this.id)" id="food-drink">Food / Drink</li>
+            <li class="emoji-category" onclick="searchCategory(this.id)" id="travel-places">Travel / Places</li>
+            <li class="emoji-category" onclick="searchCategory(this.id)" id="activities">Activities</li>
+            <li class="emoji-category" onclick="searchCategory(this.id)" id="flags">Flags</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="emoji-list">
+                <div class="emoji">
+                    <div class="emoji-card">
+                        <div class="emoji-card__container" onclick="copyContent()"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
