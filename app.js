@@ -27,11 +27,14 @@ function emojiHTML(emoji) {
 function copyContent(event) {
   let copiedText = event.target.innerText;
 
-  /* Copy the text inside the text field */
-  navigator.clipboard.writeText(copiedText);
-
-  //   /* Alert the copied text */
-  //   alert("Copied the text: " + copiedText);
+  navigator.clipboard
+    .writeText(copiedText)
+    .then(() => {
+      alert("Copied! " + copiedText);
+    })
+    .catch(() => {
+      alert("Something went wrong.");
+    });
 }
 
 // Using search value to render suitable emojis associated to keywords
