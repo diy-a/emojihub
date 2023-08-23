@@ -1,5 +1,5 @@
 # EMOJIHUB 👽
-
+![Preview](EmojiHub.gif)
 ## What is it?
 
 This project is a site that lists all emojis available for easy access.
